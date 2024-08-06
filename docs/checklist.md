@@ -17,26 +17,26 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
     2.	Dersom andre drifter, hvordan overleveres applikasjonen til disse? 
         1. Har vi en klar ansvarsfordeling mellom oss og andre? 
 2.	[Klassifisering og data](./01_planlegge/02_data_og_klassifisering.md) 
-    1.	Er applikasjonen vurdert mtp klassifisering av data? Hvilke krav følger av klassifiseringen: 
+    1.	Er applikasjonen vurdert med tanke på klassifisering av data? Hvilke krav følger av klassifiseringen? 
     2.	Er det klart om, og hvorvidt personopplysninger behandles i applikasjonen?
     3.	Hvordan håndteres testdata i prosjektet? 
         * Hvordan anonymiseres eller ivaretas eventuelle hensyn til sensitivitet og personvern? 
 3.	[Backup, disaster recovery og business continuity planning](./01_planlegge/03_business_continuity.md)
     1.	Er det lagt en plan for hvordan og hvor ofte backup skal tas?  
         * Husk også på backup av kildekodesystemer og andre relevante verktøy!
-    2.	Hvordan sikres sensitive data ifm backup, herunder også sletting av data?
-    3.	Er det definert en SLA for applikasjonen? 
+    2.	Hvordan sikres sensitive data i forbindelse med backup, herunder også sletting av data?
+    3.	Er det definert en service level agreement (SLA) for applikasjonen? 
         * Hvilke forventninger har kunden og har vi rigget oss riktig for å møte disse? 
     4.	Ved en hendelse, har vi avklart hvem som skal kontaktes i Bouvet og hos kunden? 
     5.	Er det definert en plan for disaster recovery?
-        * Har teamet dokumentert og eventuelt testet hvordan applikasjonen kan gjøres tilgjengelig vet plutselige hendelser, eksempelvis ved bortfall av datasenter hos oss eller eksterne leverandører, også inkludert skyleverandører?         
+        * Har teamet dokumentert og eventuelt testet hvordan applikasjonen kan gjøres tilgjengelig ved plutselige hendelser, eksempelvis ved bortfall av datasenter hos oss eller eksterne leverandører, også inkludert skyleverandører?         
     6.	Dersom applikasjonen blir utilgjengelig i kortere eller lengre perioder, hvilke følger får dette for oss og kunden?     
         * Finnes det alternativer eller workarounds for løsningen? 
-        * Er disse dokumentert og beskrevet, også med tanke på eventuelt ekstraarbeid som må gjøres etter at løsningen bli tilgjengelig igjen? 
+        * Er disse dokumentert og beskrevet, også med tanke på eventuelt ekstraarbeid som må gjøres etter at løsningen blir tilgjengelig igjen? 
         * Er det andre konsekvenser for oss eller kunde som må hensynstas? 
 4.	[Har teamet definert hvilke verktøy som skal brukes og hvordan disse skal håndteres?](./01_planlegge/04_verktoy_og_bruk.md)
     1.	Er kildekodesystemer satt opp med fornuftige policyer? 
-        * Dette kan være beskyttet mainbranch, spesifikk branching strategi, code review ifm PR, dokumentering av endringer?
+        * Dette kan være beskyttet mainbranch, spesifikk branching strategi, code review i forbindelse med pull request (PR), dokumentering av endringer?
     2.	Pipelines brukt i forbindelse med bygging, deployment, testing og annet?
     3.	Har vi kontroll på hvor data og kildekode lagres? 
         * Noen selskaper har restriksjoner på hvor data kan oppbevares, eksempelvis kun på innenlands datasentre, innenfor EU eller i land dekket av samarbeidsavtaler. 
@@ -82,7 +82,7 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 3.	[Hvordan valideres data som hentes fra andre systemer?](./03_utvikle/03_datavalidering.md) 
 4.	[Har teamet innført noen rutiner som sikrer mot vanlige angrepstyper, f.eks. som beskrevet i OWASP Top 10?](./03_utvikle/04_sikkerhetspraksiser.md)
 5.	[Hvordan vurderer og sikrer teamet seg mot software supply-chain-attacks?](./03_utvikle/05_software_supply_chain.md) 
-    1.	Gjøres det noen vurderinger ift å bruke en avhengighet vs å lage selv? 
+    1.	Gjøres det noen vurderinger i forhold til å bruke en avhengighet vs å lage selv? 
 6.	[Krever applikasjonen tredjepartssoftware som teamet selv må drifte?](./03_utvikle/06_interne_komponenter.md) F.eks. webservere, meldingstjenester, andre typer serverkomponenter?
     1.	Har teamet en rutine for å holde disse oppdatert? 
     2.  Inkluderes disse i eventuelle trusselvurderinger?
@@ -96,7 +96,7 @@ Last ned [sjekklisten](https://raw.githubusercontent.com/bouvet/sikkerhet.bouvet
 
 ## Deploye
 1.	[Hvordan utføres bygging og deployment av løsningen?](./04_deploye/01_cicd.md) 
-    1. Ved bruk av pipelines, er disse underlagt samme regime som applikasjonskoden mtp endringshåndtering? 
+    1. Ved bruk av pipelines, er disse underlagt samme regime som applikasjonskoden med tanke på endringshåndtering? 
     2. [Har teamet et forhold til sikring av byggmiljø?](./04_deploye/02_bygg.md)
     3. [Kjøres det review i forkant av deployment?](./04_deploye/03_deploy.md)
 3.	[Er det planlagt for penetrasjonstesting i forbindelse med deployment?](./04_deploye/04_pentesting.md) 
